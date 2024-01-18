@@ -10,10 +10,14 @@ interface Post {
   }
   
 
-const usePosts = () => useQuery<Post[],Error>({
-    queryKey:['posts'],
-    queryFn:() =>axios
-    .get("https://jsonplaceholder.typicode.com/posts")
+const usePosts = (userId:number | undefined) => useQuery<Post[],Error>({
+    queryKey: userId ? ['users',userId,'posts'] :['posts'],
+    queryFn:() =>axios 
+    .get("https://jsonplaceholder.typicode.com/posts",{
+      params:{
+        userId
+      }
+    })
     .then((res) => res.data),
     staleTime: 1 * 60 * 1000
 });
