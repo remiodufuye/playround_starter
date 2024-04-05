@@ -28,9 +28,10 @@ const LoginStatus = () => {
 };
 
 export default LoginStatus;
-function useContext(AuthContext: Context<AuthContextType>): {
-  user: any;
-  dispatch: any;
-} {
-  throw new Error("Function not implemented.");
-}
+
+// function useContext(AuthContext: Context<AuthContextType>): {
+//   user: any;
+//   dispatch: any;
+// } {
+//   throw new Error("Function not implemented.");
+// }
