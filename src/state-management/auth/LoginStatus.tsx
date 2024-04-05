@@ -1,15 +1,14 @@
-import { useReducer, useState } from "react";
-import useAuth from "./useAuth";
+import useAuthStore from "./store";
 
 const LoginStatus = () => {
-  const { user, dispatch } = useAuth();
+  const { user, login, logout } = useAuthStore();
 
   if (user)
     return (
       <>
         <div>
           <span className="mx-2">{user}</span>
-          <a onClick={() => dispatch({ type: "LOGOUT" })} href="#">
+          <a onClick={() => logout()} href="#">
             Logout
           </a>
         </div>
@@ -17,10 +16,7 @@ const LoginStatus = () => {
     );
   return (
     <div>
-      <a
-        onClick={() => dispatch({ type: "LOGIN", username: "Remi.Odufuye" })}
-        href="#"
-      >
+      <a onClick={() => login("Remi.Odufuye")} href="#">
         Login
       </a>
     </div>
@@ -28,10 +24,3 @@ const LoginStatus = () => {
 };
 
 export default LoginStatus;
-
-// function useContext(AuthContext: Context<AuthContextType>): {
-//   user: any;
-//   dispatch: any;
-// } {
-//   throw new Error("Function not implemented.");
-// }
