@@ -8,7 +8,7 @@ Advanced Training and Certifications: I am studying to become a Certified Kubern
  
 I am also preparing to obtain additional certifications relevant to AWS cloud operations , presently the SysOps Administrator Certification 
 
-Hands-On Experience: I have gained valuable hands-on experience by actively working on some very complex AWS projects in my current role at NASA. 
+Hands-On Experience: I have gained valuable hands-on experience by actively working on some very complex Microservice Based Applications Running on Kubernetes  . 
 
 These projects have allowed me to deepen my understanding of AWS services and hone my problem-solving skills in diverse operational scenarios.
 
